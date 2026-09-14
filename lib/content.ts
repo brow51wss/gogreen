@@ -10,6 +10,13 @@ export const navLinks = [
 export const heroLead =
   "GGPEP Co. engineers, imports and deploys heavy wastewater treatment, drinking water and thermal waste systems across the Philippines — then guarantees they pass DENR inspection. One vendor, from site assessment to certified effluent.";
 
+export const heroStats = [
+  { value: "1–5+", label: "CMD BIOLOGICAL STP RANGE" },
+  { value: "850°C+", label: "SMOKELESS PYROLYSIS CHAMBER" },
+  { value: "99.99%", label: "BACTERIA REMOVAL, RO / UF LINE" },
+  { value: "60Hz", label: "EVERY IMPORT RE-CALIBRATED FOR PH" },
+] as const;
+
 export const partners = [
   "WEIFANG HENGYUAN",
   "WANZE SHENGSHI",

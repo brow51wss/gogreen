@@ -1,3 +1,4 @@
+import { HeroStats } from "@/components/hero-stats";
 import { PhotoSlot } from "@/components/photo-slot";
 import { heroLead, industries, processSteps } from "@/lib/content";
 
@@ -38,6 +39,7 @@ export function Solutions() {
       className="bg-paper px-[clamp(16px,4vw,40px)] py-[clamp(56px,8vw,110px)] text-paper-ink"
     >
       <div className="mx-auto max-w-[1280px]">
+        <HeroStats className="mb-[clamp(28px,4vw,48px)] lg:hidden" />
         <p className="mb-[clamp(28px,4vw,48px)] max-w-[62ch] text-[16.5px] leading-[1.6] text-[oklch(0.42_0.012_160)] lg:hidden">
           {heroLead}
         </p>

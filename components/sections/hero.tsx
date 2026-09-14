@@ -1,18 +1,12 @@
+import { HeroStats } from "@/components/hero-stats";
 import { HeroVideo } from "@/components/sections/hero-video";
 import { heroLead } from "@/lib/content";
-
-const stats = [
-  { value: "1–5+", label: "CMD BIOLOGICAL STP RANGE" },
-  { value: "850°C+", label: "SMOKELESS PYROLYSIS CHAMBER" },
-  { value: "99.99%", label: "BACTERIA REMOVAL, RO / UF LINE" },
-  { value: "60Hz", label: "EVERY IMPORT RE-CALIBRATED FOR PH" },
-];
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden px-[clamp(16px,4vw,40px)] pt-[clamp(56px,9vw,116px)] pb-[clamp(40px,6vw,76px)]"
+      className="relative overflow-hidden px-[clamp(16px,4vw,40px)] pt-[clamp(56px,9vw,116px)] pb-[clamp(40px,6vw,76px)] max-lg:flex max-lg:h-[85dvh] max-lg:min-h-min max-lg:flex-col max-lg:justify-end"
     >
       <div className="absolute inset-0 bg-[repeating-linear-gradient(135deg,oklch(0.24_0.03_162)_0_14px,oklch(0.17_0.017_162)_14px_28px)] opacity-50" />
       <HeroVideo />
@@ -43,18 +37,7 @@ export function Hero() {
             See what we build
           </a>
         </div>
-        <div className="mt-[clamp(40px,6vw,72px)] grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 shadow-[0_16px_40px_oklch(0_0_0/0.45)]">
-          {stats.map((stat) => (
-            <div key={stat.label} className="bg-panel px-[22px] pt-[22px] pb-5">
-              <div className="text-[clamp(28px,3.4vw,40px)] font-extrabold tracking-[-0.03em] text-accent">
-                {stat.value}
-              </div>
-              <div className="mt-2 font-mono text-[11px] leading-[1.5] tracking-[0.08em] text-[oklch(0.70_0.01_160)]">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
+        <HeroStats className="mt-[clamp(40px,6vw,72px)] hidden shadow-[0_16px_40px_oklch(0_0_0/0.45)] lg:block" />
       </div>
     </section>
   );
